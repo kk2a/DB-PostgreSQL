@@ -1,0 +1,1 @@
+select id as "ID", name as "名前", level as "レベル", job as "ジョブ" from s_characters;

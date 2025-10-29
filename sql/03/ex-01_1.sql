@@ -1,0 +1,1 @@
+select id, name, level, created_on from s_characters;

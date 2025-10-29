@@ -16,7 +16,8 @@
     "Yamato"
   ],
   "[sql]": {
-    "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc"
+    "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc",
+    "editor.formatOnSave": true
   },
   "SQL-Formatter-VSCode.keywordCase": "upper",
   "SQL-Formatter-VSCode.denseOperators": false,
@@ -24,5 +25,6 @@
   "SQL-Formatter-VSCode.expressionWidth": 80,
   "SQL-Formatter-VSCode.functionCase": "upper",
   "SQL-Formatter-VSCode.logicalOperatorNewline": "after",
-  "SQL-Formatter-VSCode.dialect": "postgresql"
+  "SQL-Formatter-VSCode.dialect": "postgresql",
+  "files.autoSave": "off"
 }
