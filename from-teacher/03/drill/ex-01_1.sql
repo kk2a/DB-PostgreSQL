@@ -1,7 +1,7 @@
 SELECT
   id,
-  last_login_at,
-  created_on,
-  id
+  name,
+  level,
+  created_on
 FROM
   s_characters;
