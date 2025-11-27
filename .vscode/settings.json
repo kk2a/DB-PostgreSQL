@@ -4,6 +4,7 @@
     "backline",
     "dbgate",
     "debuff",
+    "Elen",
     "fuga",
     "Gomi",
     "hameln",
@@ -13,6 +14,7 @@
     "Prefecturals",
     "RDBMS",
     "sslmode",
+    "TRUNC",
     "Yamato"
   ],
   "[sql]": {
