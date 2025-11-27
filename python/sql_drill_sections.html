@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>SQLドリル問題一覧</title>
+<link rel='stylesheet' href='https://takeshiwada1980.github.io/DB-2025/site_libs/bootstrap/bootstrap.min.css'>
+<link rel='stylesheet' href='https://takeshiwada1980.github.io/DB-2025/site_libs/bootstrap/bootstrap-icons.css'>
+<style>
+.section { margin-bottom: 40px; padding: 20px; border: 2px solid #dee2e6; border-radius: 8px; background-color: #fff; }
+.section-header { background-color: #f8f9fa; padding: 15px; margin: -20px -20px 20px -20px; border-radius: 6px 6px 0 0; border-bottom: 2px solid #dee2e6; }
+.section-title { margin: 0; color: #212529; font-size: 1.5em; }
+.section-url { font-size: 0.9em; color: #6c757d; margin-top: 8px; }
+.section-url a { color: #0d6efd; text-decoration: none; }
+.section-url a:hover { text-decoration: underline; }
+/* マスク処理用CSS */
+.masked {
+  color: transparent;
+  background-color: #fff57c;
+  padding: 0.05em 0.5em;
+  border: solid 2px #fff57c;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: all 0.3s ease;
+}
+.masked.open {
+  color: inherit;
+  background-color: transparent;
+  border-color: transparent;
+}
+.masked:hover {
+  opacity: 0.8;
+}
+</style>
+</head>
+<body>
+<div class='container py-4'>
+<h1 class='mb-4'>SQLドリル問題一覧</h1>
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【1】 7.3.1SQLドリル💻 (ID: sqlドリル)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture03.html'>https://takeshiwada1980.github.io/DB-2025/lecture03.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-01_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのすべてのレコードについて
+      <code>id</code>、<code>name</code>、<code>level</code>、<code>created_on</code> を取得する SQL
+      文を記述し、実行せよ。なお、問題文に示した順番でカラムが並ぶようにすること。</li>
+<li><code>ex-01_2.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのすべてのレコードについて
+      <code>id</code>、<code>last_login_at</code>、<code>created_on</code>, <code>id</code>
+      を取得する SQL
+      文を記述し、実行せよ。なお、問題文に示した順番でカラムが並ぶようにすること。</li>
+</ul>
+<p><strong>SQLドリル</strong>💻は、プロジェクトのなかに <code>sql/03/drill/ex-01_1.sql</code>
+      のようなファイルを作成して取り組むことを推奨します。解答例 (参考) は <code>from-teacher</code>
+      フォルダのなかに配置しています。</p>
+<ul>
+<li>SQLドリルについては、<strong>文法や構文を体で覚える観点から</strong>、GitHub Copilot
+      のコード補完を切って、コピペも避けて SQL を手入力することを推奨します。</li>
+</ul>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【2】 7.4.1SQLドリル💻 (ID: sqlドリル-1)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture03.html'>https://takeshiwada1980.github.io/DB-2025/lecture03.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-02_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのすべてのレコードについて
+      <code>id</code>、<code>name</code>、<code>level</code>、<code>job</code> を取得する SQL
+      文を記述し、実行せよ。なお、カラムは問題文に示した順序で並ぶようにし、それぞれのカラムのヘッダ
+      (ラベル) が「ID」「名前」「レベル」「ジョブ」となるようにせよ。</li>
+<li><code>ex-02_2.sql</code> 👉 <strong>s_users</strong> テーブルのすべてのレコードについて
+      <code>id</code>、<code>name</code>、<code>age</code> を取得する SQL
+      文を記述し、実行せよ。なお、カラムは問題文に示した順序で並ぶようにし、それぞれのカラムのヘッダ
+      (ラベル) が「出席番号」「名前」「年齢」となるようにせよ。</li>
+</ul>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【3】 7.6.1SQLドリル💻 (ID: sqlドリル-2)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture03.html'>https://takeshiwada1980.github.io/DB-2025/lecture03.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-03_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのすべてのレコードについて、次に示すようなチェックリストを出力する SQL
+      を記述せよ。</li>
+</ul>
+<pre><code> id |  name   | level | buff  |  不正行為の疑い?  
+----+---------+-------+-------+-------------------
+  1 | Marvin  |    35 | -0.15 | 要調査 / 問題なし
+  2 | Zach    |    62 |  0.10 | 要調査 / 問題なし
+  3 | Charlie |    57 |  0.00 | 要調査 / 問題なし
+  4 | Tom     |     1 |  0.00 | 要調査 / 問題なし
+  5 | Ivan    |    39 | -0.07 | 要調査 / 問題なし
+ ～～ 以下略 ～～</code></pre>
+<ul>
+<li><code>ex-03_2.sql</code> 👉 <strong>s_users</strong>
+      テーブルのすべてのレコードについて、次に示すようなカラムを出力する SQL を記述せよ。
+      <ul>
+<li>age カラムの出力 (<code>XX歳</code>)
+      には、次のセクションで解説する「<strong>文字列の結合</strong>」を使用する必要があります。</li>
+</ul></li>
+</ul>
+<pre><code> grade | course | name  | age  
+-------+--------+-------+------
+     4 | M      | Alice | 20歳
+     4 | M      | Bob   | 25歳</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【4】 7.7.1SQLドリル💻 (ID: sqlドリル-3)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture03.html'>https://takeshiwada1980.github.io/DB-2025/lecture03.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex_04-1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのすべてのレコードについて、次に示すようなカラムを出力する SQL を記述せよ。</li>
+</ul>
+<pre><code> id |        summary
+----+------------------------
+  1 | Marvin (Priest Lv.35)
+  2 | Zach (Ninja Lv.62)
+  3 | Charlie (Wizard Lv.57)
+  4 | Tom (Fighter Lv.1)
+  5 | Ivan (Monk Lv.39)
+ ～～ 以下略 ～～</code></pre>
+<ul>
+<li><code>ex_04-2.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのすべてのレコードについて、次に示すようなカラムを出力する SQL
+      を記述せよ。ただし、<strong>Boosted Level</strong> は <strong>level</strong>
+      を「1.2倍」にして切り上げた値とすること。</li>
+</ul>
+<pre><code> id | Level | Boosted Level 
+----+-------+---------------
+  1 |    35 |            42
+  2 |    62 |            75
+  3 |    57 |            69
+  4 |     1 |             2
+  5 |    39 |            47</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【5】 7.8.1SQLドリル💻 (ID: sqlドリル-4)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture03.html'>https://takeshiwada1980.github.io/DB-2025/lecture03.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-05_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのすべてのレコードについて、次に示すようなカラムを出力する SQL
+      を記述せよ。なお、<strong>battle_position</strong> は <strong>job</strong>
+      が「Fighter」「Samurai」「Monk」「Ninja」のときに「frontline」、それ以外のときに「backline」となるようにすること。</li>
+</ul>
+<pre><code> id |  name   |   job   | battle_position 
+----+---------+---------+-----------------
+  1 | Marvin  | Priest  | backline
+  2 | Zach    | Ninja   | frontline
+  3 | Charlie | Wizard  | backline
+  4 | Tom     | Fighter | frontline
+  5 | Ivan    | Monk    | frontline
+ ～～ 以下略 ～～</code></pre>
+<ul>
+<li><code>ex-05_2.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのレコードについて、次に示すようなカラムを出力する SQL
+      を記述せよ。なお、<strong>status</strong> は <strong>buff</strong> が、0.0
+      のときは「–」、負数の場合は「debuff」、正数の場合は「buff」となるようにすること。</li>
+</ul>
+<pre><code> id |  name   | buff  | status 
+----+---------+-------+--------
+  1 | Marvin  | -0.15 | debuff
+  2 | Zach    |  0.10 | buff
+  3 | Charlie |  0.00 | --
+  4 | Tom     |  0.00 | --
+  5 | Ivan    | -0.07 | debuff
+ ～～ 以下略 ～～</code></pre>
+<ul>
+<li><code>ex-05_3.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのレコードについて、次に示すようなカラムを出力する SQL
+      を記述せよ。なお、<strong>class</strong> は以下の条件により決定すること。
+      <ul>
+<li><code>Master</code> : <strong>level</strong>
+      が「50」以上、かつ、<strong>created_on</strong> が「2022/12/31」以前</li>
+<li><code>Veteran</code> : <code>Master</code> の条件を満たさず、<strong>level</strong>
+      が「30」以上、かつ、<strong>created_on</strong> が「2023/12/31」以前</li>
+<li><code>Rookie</code> : <code>Master</code> の条件も、<code>Veteran</code>
+      の条件も満たさない</li>
+</ul></li>
+</ul>
+<pre><code> id |  name   | level | created_on |  class  
+----+---------+-------+------------+---------
+  1 | Marvin  |    35 | 2020-09-23 | Veteran
+  2 | Zach    |    62 | 2020-10-25 | Master
+  3 | Charlie |    57 | 2020-12-05 | Master
+  4 | Tom     |     1 | 2020-12-05 | Rookie
+  5 | Ivan    |    39 | 2021-02-15 | Veteran
+ ～～ 以下略 ～～</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【6】 7.9.1SQLドリル💻 (ID: sqlドリル-5)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture03.html'>https://takeshiwada1980.github.io/DB-2025/lecture03.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-06_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのレコードについて、次に示すようなカラムを出力する SQL を記述せよ。なお、<strong>guild
+      or (name)</strong> の値は、次の条件に従って決定すること。<code>CASE</code>
+      式は使用せず、<code>COALESCE</code> 関数を用いること。
+      <ul>
+<li><strong>guild</strong> が <code>NULL</code> でない場合は、その値 (<strong>guild</strong>)
+      を表示する。</li>
+<li><strong>guild</strong> が <code>NULL</code> の場合は、<strong>name</strong>
+      を括弧で囲んで表示する。</li>
+</ul></li>
+</ul>
+<pre><code> id |  name   | guild  | guild or (name) 
+----+---------+--------+---------------
+  1 | Marvin  | Yamato | Yamato
+  2 | Zach    | D.D.D  | D.D.D
+  3 | Charlie |        | (Charlie)
+  4 | Tom     |        | (Tom)
+  5 | Ivan    |        | (Ivan)
+ ～～ 以下略 ～～</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【7】 7.10.1SQLドリル💻 (ID: sqlドリル-6)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture03.html'>https://takeshiwada1980.github.io/DB-2025/lecture03.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-07_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、キャラクタが所属しているギルドの一覧を取得する SQL
+      を記述せよ。なお、<code>NULL</code> は「未所属」として出力すること。</li>
+</ul>
+<pre><code> ギルド 
+--------
+ 未所属
+ Yamato
+ hameln
+ D.D.D</code></pre>
+<ul>
+<li><code>ex-07_2.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、次のように各ギルドに所属しているジョブを重複を除いて取得する SQL
+      を記述せよ。なお、ギルドが <code>NULL</code> のときは「未所属」として出力すること。</li>
+</ul>
+<pre><code> ギルド | ジョブ  
+--------+---------
+ 未所属 | Wizard
+ D.D.D  | Wizard
+ D.D.D  | Ninja
+ hameln | Fighter
+ hameln | Monk
+ Yamato | Priest
+ hameln | Wizard
+ 未所属 | Priest
+ D.D.D  | Fighter
+ 未所属 | Fighter
+ Yamato | Samurai
+ Yamato | Fighter
+ hameln | Samurai
+ 未所属 | Monk
+ 未所属 | Samurai
+(15 行)</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【8】 7.11.1SQLドリル💻 (ID: sqlドリル-7)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture03.html'>https://takeshiwada1980.github.io/DB-2025/lecture03.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-08_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのレコードについて、次に示すようなカラムを出力する SQL
+      を記述せよ。なお、<strong>created_on</strong> は <code>2020-09-01</code>
+      以降の日付であることを仮定してよい。
+      <ul>
+<li>ヒント: 和暦 (令和) の年は、西暦の値から <span class="masked">2018</span>
+      を引くことで求めることができる。</li>
+</ul></li>
+</ul>
+<pre><code> id |  name   | created_on_1 |  created_on_2   
+----+---------+--------------+-----------------
+  1 | Marvin  | 2020-09-23   | 令和2年09月23日
+  2 | Zach    | 2020-10-25   | 令和2年10月25日
+  3 | Charlie | 2020-12-05   | 令和2年12月05日
+  4 | Tom     | 2020-12-05   | 令和2年12月05日
+  5 | Ivan    | 2021-02-15   | 令和3年02月15日
+ ～～ 以下略 ～～</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【9】 7.12.1SQLドリル💻 (ID: sqlドリル-8)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture03.html'>https://takeshiwada1980.github.io/DB-2025/lecture03.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-09_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのレコードについて、次に示すようなカラムを出力する SQL
+      を記述せよ。ただし、<strong>最終ログイン</strong>
+      は「2025年10月15日」を基準として計算すること。</li>
+</ul>
+<pre><code> id |  name   |    last_login_at    | 最終ログイン 
+----+---------+---------------------+--------------
+  1 | Marvin  | 2025-07-24 13:31:00 | 83日前
+  2 | Zach    | 2025-07-30 18:33:00 | 77日前
+  3 | Charlie | 2025-07-29 20:37:00 | 78日前
+  4 | Tom     |                     |
+  5 | Ivan    | 2025-07-18 19:29:00 | 89日前
+ ～～ 以下略 ～～</code></pre>
+<ul>
+<li><code>ex-09_2.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのレコードについて、次に示すようなカラムを出力する SQL
+      を記述せよ。ただし、<strong>Days Since Last Login</strong>
+      は「2025年10月15日」を基準として計算し、<strong>Is Active User?</strong>
+      は最終ログインから「50日以内か」で判断すること。</li>
+</ul>
+<pre><code> id |  name   | Last Login | Days Since Last Login | Is Active User? 
+----+---------+------------+-----------------------+-----------------
+  1 | Marvin  | 2025-07-24 | 83 days ago           | No
+  2 | Zach    | 2025-07-30 | 77 days ago           | No
+  3 | Charlie | 2025-07-29 | 78 days ago           | No
+  4 | Tom     |            |                       | No
+  5 | Ivan    | 2025-07-18 | 89 days ago           | No
+  6 | Alice   | 2025-09-18 | 27 days ago           | Yes
+  7 | Trudy   | 2025-09-29 | 16 days ago           | Yes
+ ～～ 以下略 ～～</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【10】 3.2.1SQLドリル💻 (ID: sqlドリル)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture04.html'>https://takeshiwada1980.github.io/DB-2025/lecture04.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-01_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのすべてのレコードについて、次に示すようなカラムを出力する SQL
+      を記述せよ。整列の基準は、第1キーを <strong>job</strong> (昇順)、第2キーを
+      <strong>level</strong> (降順)、第3キーを <strong>name</strong> (昇順) とすること。</li>
+</ul>
+<pre><code> id |   job   | level |  name   
+----+---------+-------+---------
+ 17 | Fighter |    56 | Wendy
+  7 | Fighter |    48 | Trudy
+ 10 | Fighter |    44 | Oscar
+  4 | Fighter |     1 | Tom
+  5 | Monk    |    39 | Ivan
+  8 | Monk    |    33 | Bob
+  2 | Ninja   |    62 | Zach
+ 14 | Ninja   |    46 | Eve
+ ～～ 以下略 ～～</code></pre>
+<ul>
+<li><code>ex-01_2.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのすべてのレコードについて、次に示すようなカラムを出力する SQL
+      を記述せよ。整列の基準は、第1キーを <strong>guild</strong>
+      (昇順・大文字と小文字を区別しない)、第2キーを <strong>level</strong> (降順) とすること。</li>
+</ul>
+<pre><code> id | guild  | Lv. |    name (job)    
+----+--------+-----+------------------
+ 13 | D.D.D  |  64 | Mallet (Wizard)
+  2 | D.D.D  |  62 | Zach (Ninja)
+ 17 | D.D.D  |  56 | Wendy (Fighter)
+ 11 | D.D.D  |  51 | Ellen (Wizard)
+ 14 | D.D.D  |  46 | Eve (Ninja)
+ 16 | hameln |  70 | Steve (Samurai)
+ 19 | hameln |  61 | Jack (Wizard)
+ ～～ 中略 ～～
+  1 | Yamato |  35 | Marvin (Priest)
+  9 |        |  73 | Walter (Samurai)
+  3 |        |  57 | Charlie (Wizard)
+  5 |        |  39 | Ivan (Monk)
+ 18 |        |  28 | Carol (Priest)
+  4 |        |   1 | Tom (Fighter)</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【11】 3.3.2SQLドリル💻 (ID: sqlドリル-1)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture04.html'>https://takeshiwada1980.github.io/DB-2025/lecture04.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-02_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのすべてのレコードについて、次に示すようなカラムを出力する SQL
+      を記述せよ。整列の基準は、第1キーを <strong>guild</strong>
+      (昇順・大文字と小文字を区別しない・<code>NULL</code> は先頭)、第2キーを <strong>level</strong>
+      (昇順) とすること。</li>
+</ul>
+<pre><code> id |  name   | level | guild  
+----+---------+-------+--------
+  4 | Tom     |     1 |
+ 18 | Carol   |    28 |
+  5 | Ivan    |    39 |
+  3 | Charlie |    57 |
+  9 | Walter  |    73 |
+ 14 | Eve     |    46 | D.D.D
+ 11 | Ellen   |    51 | D.D.D
+ 17 | Wendy   |    56 | D.D.D
+  2 | Zach    |    62 | D.D.D
+ 13 | Mallet  |    64 | D.D.D
+  8 | Bob     |    33 | hameln
+ 10 | Oscar   |    44 | hameln
+ ～～以下略～～</code></pre>
+<ul>
+<li><code>ex-02_2.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのすべてのレコードについて、次に示すようなカラムを出力する SQL
+      を記述せよ。なお、並び順は <strong>last_login_at</strong> が新しい順 (降順・<code>NULL</code>
+      は末尾) となるようにし、<strong>Days Since Last Login</strong>
+      カラムは「2025/10/15」を基準日として、最終ログインが何日前かを出力すること。
+      <ul>
+<li>ヒント: 前回講義 <a href="https://takeshiwada1980.github.io/DB-2025/lecture03.html#現在日時と日数時間の差を計算する-授業時間外学習">現在日時と日数・時間の差を計算する</a></li>
+</ul></li>
+</ul>
+<pre><code> id |  name   |    last_login_at    | Days Since Last Login 
+----+---------+---------------------+-----------------------
+ 15 | Trent   | 2025-10-11 17:20:00 | 4 days ago
+ 14 | Eve     | 2025-10-07 10:17:00 | 8 days ago
+ 16 | Steve   | 2025-10-06 09:14:00 | 9 days ago
+ 18 | Carol   | 2025-10-03 11:42:00 | 12 days ago
+  7 | Trudy   | 2025-09-29 12:37:00 | 16 days ago
+ 11 | Ellen   | 2025-09-25 23:55:00 | 20 days ago
+  6 | Alice   | 2025-09-18 14:22:00 | 27 days ago
+ ～～ 中略 ～～
+  3 | Charlie | 2025-07-29 20:37:00 | 78 days ago
+  1 | Marvin  | 2025-07-24 13:31:00 | 83 days ago
+  5 | Ivan    | 2025-07-18 19:29:00 | 89 days ago
+  4 | Tom     |                     |</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【12】 3.4.1SQLドリル💻 (ID: sqlドリル-2)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture04.html'>https://takeshiwada1980.github.io/DB-2025/lecture04.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-03_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのすべてのレコードについて、次に示すようなカラムを出力する SQL
+      を記述せよ。なお、ギルドのならびが「Yamato」、「<code>NULL</code>(無所属)」、それ以降は大文字と小文字を区別しない昇順
+      (ABC順) となるようにすること。また、各ギルド内ではレベルの降順で並ぶようにすること。
+      <ul>
+<li>ヒント: <code>NULL</code> を <code>(無所属)</code> という文字列で出力するためには、<a href="https://takeshiwada1980.github.io/DB-2025/lecture03.html#nullを別の値に変換する">前回講義</a> で紹介した <span class="masked"><code>COALESCE</code></span> を利用する。</li>
+</ul></li>
+</ul>
+<pre><code> id |  name   | level |  guild   
+----+---------+-------+----------
+ 12 | Dave    |    68 | Yamato
+ 15 | Trent   |    50 | Yamato
+  7 | Trudy   |    48 | Yamato
+  6 | Alice   |    42 | Yamato
+  1 | Marvin  |    35 | Yamato
+  9 | Walter  |    73 | (無所属)
+  3 | Charlie |    57 | (無所属)
+  5 | Ivan    |    39 | (無所属)
+ 18 | Carol   |    28 | (無所属)
+  4 | Tom     |     1 | (無所属)
+ 13 | Mallet  |    64 | D.D.D
+  2 | Zach    |    62 | D.D.D
+ 17 | Wendy   |    56 | D.D.D
+ 11 | Ellen   |    51 | D.D.D
+ 14 | Eve     |    46 | D.D.D
+ 16 | Steve   |    70 | hameln
+ 19 | Jack    |    61 | hameln
+ 10 | Oscar   |    44 | hameln
+  8 | Bob     |    33 | hameln</code></pre>
+<ul>
+<li><code>ex-03_2.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのすべてのレコードについて、次に示すようなカラムを出力する SQL
+      を記述せよ。なお、第1キーを <strong>job</strong> (カスタム順:
+      Samurai、Ninja、Fighter、Monk、Priest、Wizard の順)、第2キーを <strong>level</strong> (降順)
+      とすること。</li>
+</ul>
+<pre><code> id |  name   | level |   job   
+----+---------+-------+---------
+  9 | Walter  |    73 | Samurai
+ 16 | Steve   |    70 | Samurai
+ 12 | Dave    |    68 | Samurai
+  2 | Zach    |    62 | Ninja
+ 14 | Eve     |    46 | Ninja
+ 17 | Wendy   |    56 | Fighter
+ ～～ 中略 ～～
+ 18 | Carol   |    28 | Priest
+ 13 | Mallet  |    64 | Wizard
+ 19 | Jack    |    61 | Wizard
+  3 | Charlie |    57 | Wizard
+ 11 | Ellen   |    51 | Wizard</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【13】 4.2.1SQLドリル💻 (ID: sqlドリル-3)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture04.html'>https://takeshiwada1980.github.io/DB-2025/lecture04.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><p><code>ex-04_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、<strong>id</strong>、<strong>name</strong>、<strong>job</strong>、<strong>level</strong>
+      の 4 つカラムを持つレコードをランダムに3件取得する SQL を記述せよ。</p></li>
+<li><p><code>ex-04_2.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、<strong>last_login_at</strong>
+      が古い順に5件のレコードについて、以下のようなカラムを取得する SQL
+      を記述せよ。なお、<strong>last_login_at</strong> が <code>NULL</code> であるレコード
+      (＝アカウント作成後、一度もログインされていないもの) も含めて、先頭に配置すること。</p></li>
+</ul>
+<pre><code> id |  name   |    last_login_at    
+----+---------+---------------------
+  4 | Tom     |
+  5 | Ivan    | 2025-07-18 19:29:00
+  1 | Marvin  | 2025-07-24 13:31:00
+  3 | Charlie | 2025-07-29 20:37:00
+  2 | Zach    | 2025-07-30 18:33:00</code></pre>
+<ul>
+<li><code>ex-04_3.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、<strong>created_on</strong> を古い順 (<code>NULL</code>は末尾)
+      にならべて「11件目から15件目」にあたるレコードを、以下のようなカラムで取得する SQL
+      を記述せよ。</li>
+</ul>
+<pre><code> id |  name  | created_on 
+----+--------+------------
+ 10 | Oscar  | 2022-11-10
+ 12 | Dave   | 2023-01-19
+ 13 | Mallet | 2023-02-02
+ 14 | Eve    | 2023-09-07
+ 15 | Trent  | 2023-10-04</code></pre>
+<ul>
+<li>注意: <strong>s_characters</strong> テーブルの Oscar (id: <code>10</code>) と Ellen (id:
+      <code>11</code>) の <strong>created_on</strong>
+      は、<code>from-teacher/03/init-s_characters.sql</code> のなかで意図的に逆転させています。</li>
+</ul>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【14】 5.4.1SQLドリル💻 (ID: sqlドリル-4)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture04.html'>https://takeshiwada1980.github.io/DB-2025/lecture04.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-05_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、<strong>buff</strong> が <code>0.00</code> 以外のレコードを抽出して、第1キーを
+      <strong>buff</strong> (降順)、第2キーを <strong>level</strong> (降順) でソートするような SQL
+      を記述せよ。なお、id、name、level、buff のカラムを出力すること。</li>
+</ul>
+<pre><code> id |  name  | level | buff  
+----+--------+-------+-------
+ 13 | Mallet |    64 |  0.10
+  2 | Zach   |    62 |  0.10
+ 17 | Wendy  |    56 |  0.10
+ 11 | Ellen  |    51 |  0.10
+ 14 | Eve    |    46 |  0.10
+ 16 | Steve  |    70 |  0.05
+ 19 | Jack   |    61 |  0.05
+ 10 | Oscar  |    44 |  0.05
+  8 | Bob    |    33 |  0.05
+  5 | Ivan   |    39 | -0.07
+  1 | Marvin |    35 | -0.15
+ 18 | Carol  |    28 | -0.20</code></pre>
+<ul>
+<li><code>ex-05_2.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、<strong>name</strong> が「T」からはじまるレコードについて、以下のようなカラムを
+      <strong>name</strong> の昇順で取得する SQL を記述せよ。</li>
+</ul>
+<pre><code> id | name  | level | created_on 
+----+-------+-------+------------
+  4 | Tom   |     1 | 2020-12-05
+ 15 | Trent |    50 | 2023-10-04
+  7 | Trudy |    48 | 2021-11-28</code></pre>
+<ul>
+<li><code>ex-05_3.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、<strong>created_on</strong>
+      が「2021年」と「2022年」のレコードについて、以下のようなカラムを <strong>created_on</strong>
+      の昇順で取得する SQL を記述せよ。ここでは、BETWEEN述語を使用することを期待している。</li>
+</ul>
+<pre><code> id |  name  | level | created_on 
+----+--------+-------+------------
+  5 | Ivan   |    39 | 2021-02-15
+  6 | Alice  |    42 | 2021-06-14
+  7 | Trudy  |    48 | 2021-11-28
+  8 | Bob    |    33 | 2022-03-22
+  9 | Walter |    73 | 2022-04-06
+ 11 | Ellen  |    51 | 2022-08-30
+ 10 | Oscar  |    44 | 2022-11-10</code></pre>
+<ul>
+<li><code>ex-05_4.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、<strong>created_on</strong>
+      が「2021年」と「2022年」<strong>以外</strong>のレコードについて、以下のようなカラムを
+      <strong>created_on</strong> の昇順で取得する SQL
+      を記述せよ。ここでは、BETWEEN述語を使用することを期待している。
+      <ul>
+<li><strong>ヒント</strong>: <span class="masked"><code>NOT</code>を利用する</span></li>
+</ul></li>
+</ul>
+<pre><code> id |  name   | level | created_on 
+----+---------+-------+------------
+  1 | Marvin  |    35 | 2020-09-23
+  2 | Zach    |    62 | 2020-10-25
+  3 | Charlie |    57 | 2020-12-05
+  4 | Tom     |     1 | 2020-12-05
+ 12 | Dave    |    68 | 2023-01-19
+ 13 | Mallet  |    64 | 2023-02-02
+ 14 | Eve     |    46 | 2023-09-07
+ 15 | Trent   |    50 | 2023-10-04
+ 16 | Steve   |    70 | 2024-01-27
+ 17 | Wendy   |    56 | 2024-03-18
+ 18 | Carol   |    28 | 2024-05-11
+ 19 | Jack    |    61 | 2024-07-12</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【15】 6.3.1SQLドリル💻 (ID: sqlドリル-5)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture04.html'>https://takeshiwada1980.github.io/DB-2025/lecture04.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-06_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルに、以下に示すような2件のレコードを挿入する SQL を記述せよ。
+      <ul>
+<li><i class="fa-brands fa-github"></i><a href="https://github.com/TakeshiWada1980/DB-2025-PostgreSQL/blob/main/from-teacher/03/init-s_characters.sql">from-teacher/03/init-s_characters.sql</a>
+      の <code>INSERT</code> 文を参考にすること。</li>
+<li><code>START TRANSACTION</code> ～ <code>ROLLBACK</code> で囲んで実行すること。</li>
+</ul></li>
+</ul>
+<pre><code>  name   |   job   | level | buff  | guild  |    last_login_at    | created_on
+---------+---------+-------+-------+--------+---------------------+------------
+ Zoe     | Paladin |    11 |  0.00 | W.Wind | 2025-10-20 15:48:00 | 2025-10-12
+ Justin  | Archer  |     2 |  0.50 |        | 2025-10-23 11:28:00 | 2025-10-23</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【16】 5.0.1SQLドリル💻 (ID: sqlドリル)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><p><code>ex-01_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのレコードについて、2025年10月15日を起算日として60日以上ログインがなかったレコードを削除する
+      SQL を記述せよ。</p>
+<ul>
+<li><code>DATE</code> 型の「2025年10月15日」は、<code>CAST('2025-10-15' AS DATE)</code> または
+      <code>DATE '2025-10-15'</code> で得ることができます。</li>
+</ul></li>
+<li><p><code>ex-01_2.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのレコードについて、<strong>last_login_at</strong> が <code>NULL</code>
+      で、<strong>created_on</strong> が2023年12月31日以前のレコードを削除する SQL
+      を記述せよ。</p></li>
+<li><p><code>ex-01_3.sql</code> 👉 <strong>s_characters</strong>
+      テーブルのレコードについて、<strong>id</strong>
+      が「3」「5」「8」「9」「10」「14」の6件のレコードを削除する SQL を記述せよ。</p></li>
+</ul>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【17】 6.1.1SQLドリル💻 (ID: sqlドリル-1)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-02_1.sql</code> 👉 上記SQLの「<strong>更新前のレコードを確認
+      (省略)</strong>」と「<strong>更新後のレコードを確認
+      (省略)</strong>」の箇所に、実際に更新処理が確認できるような <code>SELECT</code>
+      文を記述せよ。</li>
+</ul>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【18】 6.2.1SQLドリル💻 (ID: sqlドリル-2)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-02_2.sql</code> 👉 <strong>s_characters</strong> テーブルの <strong>job</strong>
+      カラムについて <code>Wizard</code> を <code>Mage</code> に更新する SQL を記述せよ。</li>
+</ul>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【19】 6.3.1SQLドリル💻 (ID: sqlドリル-3)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><p><code>ex-02_3.sql</code> 👉
+      ソロプレイ前衛職応援キャンペーン🎉として、<strong>guild</strong> が <code>NULL</code>
+      で、<strong>job</strong> が Fighter、Monk、Samurai、Ninja のキャラクタの <strong>buff</strong>
+      を <code>現在値+0.25</code> (25%Up) に更新するような SQL を記述せよ。また、更新の前後の
+      <strong>buff</strong> カラムなどを確認する SQL も記述すること。</p></li>
+<li><p><code>ex-02_4.sql</code> 👉
+      おかえりなさいキャンペーン🎉として、2025年10月15日を基準日とし、最終ログイン日からの経過日数に応じて
+      <strong>buff</strong> の値を更新 (上書き) するような SQL を記述せよ。</p>
+<ul>
+<li>最終ログイン日から <strong>60日以上</strong> 経過していれば <strong>buff</strong> を
+      <code>0.40</code></li>
+<li>最終ログイン日から <strong>40日以上</strong> 経過していれば <strong>buff</strong> を
+      <code>0.30</code></li>
+<li>最終ログイン日から <strong>20日以上</strong> 経過していれば <strong>buff</strong> を
+      <code>0.20</code></li>
+<li>最終ログイン日から <strong>10日以上</strong> 経過していれば <strong>buff</strong> を
+      <code>0.10</code></li>
+<li>それ以外は <strong>buff</strong> を <code>0.00</code> に設定</li>
+</ul></li>
+</ul>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【20】 6.4.1SQLドリル💻 (ID: sqlドリル-4)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-02_5.sql</code> 👉 <strong>s_characters</strong>
+      テーブルについて、前衛職のジョブを次のように入れ替えるための SQL を記述せよ。
+      <ul>
+<li>Fighter を Monk に変更</li>
+<li>Monk を Samurai に変更</li>
+<li>Samurai を Ninja に変更</li>
+<li>Ninja を Fighter に変更</li>
+</ul></li>
+</ul>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【21】 7.1.2SQLドリル💻 (ID: sqlドリル-5)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-03_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから次のような結果セットを得る SQL を記述せよ。</li>
+</ul>
+<pre><code> ジョブ種 
+----------
+ 6種類</code></pre>
+<ul>
+<li><code>ex-03_2.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから次のような結果セットを得る SQL を記述せよ。</li>
+</ul>
+<pre><code> ギルド所属 | 無所属 
+------------+--------
+ 14人       | 5人</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【22】 7.2.2SQLドリル💻 (ID: sqlドリル-6)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-03_3.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、次のようにギルド無所属 (＝<strong>guild</strong> が <code>NULL</code>)
+      のキャラクタについて、レベルの平均と合計を求める SQL
+      を記述せよ。ただし、レベルの平均は小数第3位を四捨五入して、小数第2位まで表示すること。
+      <ul>
+<li><strong>ヒント</strong> : <span class="masked">ギルド無所属のキャラクタだけを対象にするには <code>WHERE</code>
+      句を利用する</span></li>
+</ul></li>
+</ul>
+<pre><code> 無所属平均Lv | 無所属合計Lv 
+--------------+--------------
+        39.60 |          198</code></pre>
+<ul>
+<li><code>ex-03_4.sql</code> 👉 <strong>s_characters</strong> テーブルから、前衛職
+      (Fighter、Monk、Samurai、Ninja) の人数と平均レベル、後衛職 (Wizard、Priest)
+      の人数と平均レベルを求める SQL を記述せよ (現時点までに学んでいる範囲では、2つの
+      <code>SELECT</code>
+      文を記述する必要がある)。ただし、レベルの平均は小数第2位を四捨五入して、小数第1位まで表示すること。</li>
+</ul>
+<pre><code> 前衛職人数 | 前衛職平均Lv 
+------------+--------------
+         11 |         49.1
+
+ 後衛職人数 | 後衛職平均Lv
+------------+--------------
+          8 |         48.5</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【23】 7.3.2SQLドリル💻 (ID: sqlドリル-7)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-03_5.sql</code> 👉 <strong>s_characters</strong> テーブルから、次に示すように
+      <strong>buff</strong> カラムの「最小値」「最大値」「最大値と最小値の差」を求める SQL
+      を記述せよ。</li>
+</ul>
+<pre><code> min_buff | max_buff | max-min 
+----------+----------+---------
+    -0.20 |     0.10 |    0.30</code></pre>
+<ul>
+<li><p><code>ex-03_6.sql</code> 👉 <strong>s_characters</strong>
+      テーブルにおいて、最も長いギルド名が何文字かを求める SQL
+      を記述せよ。ただし、<strong>guild</strong> カラムの <code>NULL</code> 値は
+      <code>Freelancer</code> という文字列に置き換えて評価すること。</p></li>
+<li><p>現時点では、ギルド名が小文字に変換されていても問題ない。</p></li>
+</ul>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【24】 8.0.2SQLドリル💻 (ID: sqlドリル-8)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-04_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、次のような結果セットを得る SQL を記述せよ。
+      <ul>
+<li><strong>guild</strong> が <code>NULL</code>
+      のグループを先頭に配置して「無所属」というエイリアスを設定すること。</li>
+<li><strong>guild</strong> が <code>Yamato</code> のグループを結果セットに含めないこと。</li>
+</ul></li>
+</ul>
+<pre><code> guild  | num | max_lv | mim_lv | max_buff | min_buff 
+--------+-----+--------+--------+----------+----------
+ 無所属 |   5 |     73 |      1 |     0.00 |    -0.20
+ D.D.D  |   5 |     64 |     46 |     0.10 |     0.10
+ hameln |   4 |     70 |     33 |     0.05 |     0.05</code></pre>
+<ul>
+<li><code>ex-04_2.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、次のような結果セットを得る SQL を記述せよ。
+      <ul>
+<li>平均レベルの降順に整列 (ソート) すること。</li>
+</ul></li>
+</ul>
+<pre><code>   job   | num | avg_lv 
+---------+-----+--------
+ Samurai |   3 |   70.3
+ Wizard  |   4 |   58.3
+ Ninja   |   2 |   54.0
+ Priest  |   4 |   38.8
+ Fighter |   4 |   37.3
+ Monk    |   2 |   36.0</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【25】 8.2.1SQLドリル (ID: sqlドリル-9)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-04_3.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、次のような結果セットを得るような SQL を記述せよ。
+      <ul>
+<li>後衛職 (Priest、Wizard) のみを対象とすること。</li>
+</ul></li>
+</ul>
+<pre><code>  job   | guild  | count | avg_lv 
+--------+--------+-------+--------
+ Priest | Yamato |     3 |   42.3
+ Priest |        |     1 |   28.0
+ Wizard | D.D.D  |     2 |   57.5
+ Wizard | hameln |     1 |   61.0
+ Wizard |        |     1 |   57.0</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【26】 8.3.1SQLドリル💻 (ID: sqlドリル-10)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-04_4.sql</code> 👉 <strong>s_characters</strong> テーブルから、次のように
+      <strong>job</strong> ごとに最大レベル、平均レベル、人数を得るような SQL を記述せよ。
+      <ul>
+<li>全体についても、同様の集計処理を実施して <code>-TOTAL-</code>
+      というラベルをつけること。</li>
+</ul></li>
+</ul>
+<pre><code>   job   | max_lv | avg_lv | num 
+---------+--------+--------+-----
+ -TOTAL- |     73 |   48.8 |  19
+ Fighter |     56 |   37.3 |   4
+ Monk    |     39 |   36.0 |   2
+ Ninja   |     62 |   54.0 |   2
+ Priest  |     50 |   38.8 |   4
+ Samurai |     73 |   70.3 |   3
+ Wizard  |     64 |   58.3 |   4</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【27】 8.4.1SQLドリル💻 (ID: sqlドリル-11)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-04_5.sql</code> 👉 <strong>s_characters</strong>
+      テーブルから、次のように前衛職と後衛職でグループをわけて最大レベル、平均レベル、人数を得るような
+      SQL を記述せよ。</li>
+</ul>
+<pre><code> battle_position | max_lv | avg_lv | num 
+-----------------+--------+--------+-----
+ backline        |     64 |   48.5 |   8
+ frontline       |     73 |   49.1 |  11</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【28】 8.5.2SQLドリル💻 (ID: sqlドリル-12)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-04_6.sql</code> 👉 <strong>s_characters</strong> テーブルについて、次のように
+      <strong>created_on</strong> で年別に「人数」と「平均レベル」を集計した結果セットを得るような
+      SQL を記述せよ。</li>
+</ul>
+<pre><code> year | num | avg_lv 
+------+-----+--------
+ 2020 |   4 |   38.8
+ 2021 |   3 |   43.0
+ 2022 |   4 |   50.3
+ 2023 |   4 |   57.0
+ 2024 |   4 |   53.8</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【29】 9.0.1SQLドリル💻 (ID: sqlドリル-13)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture05.html'>https://takeshiwada1980.github.io/DB-2025/lecture05.html</a></div>
+  </div>
+  <div class='section-content'>
+<p><code>ex-05_1.sql</code> 👉 <strong>s_characters</strong>
+      テーブルについて、次のようにジョブごとの「平均レベル」と「人数」を集計した結果セットを得る SQL
+      を記述せよ。</p>
+<ul>
+<li>人数が2名以下のジョブは結果セットに含めないこと</li>
+<li>平均レベルの降順で表示すること</li>
+</ul>
+<pre><code>   job   | avg_lv | num 
+---------+--------+-----
+ Samurai |   70.3 |   3
+ Wizard  |   58.3 |   4
+ Priest  |   38.8 |   4
+ Fighter |   37.3 |   4</code></pre>
+  </div>
+</div>
+
+<div class='section'>
+  <div class='section-header'>
+    <h2 class='section-title'>【30】 7.4.2SQLドリル💻 (ID: sqlドリル)</h2>
+    <div class='section-url'>URL: <a href='https://takeshiwada1980.github.io/DB-2025/lecture07.html'>https://takeshiwada1980.github.io/DB-2025/lecture07.html</a></div>
+  </div>
+  <div class='section-content'>
+<ul>
+<li><code>ex-01_1.sql</code> 👉 以下に示す <strong>[期待する実行結果]</strong> を得るように
+      p_users テーブルの作成、レコードの挿入、集計処理をせよ。</li>
+</ul>
+<div class="sourceCode" data-caption="SQLドリル ex-01_1.sql" id="cb9"><pre class="sourceCode numberSource sql numberLines"><code class="sourceCode sql"><span id="cb9-1"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-1"></a><span class="co">-- トランザクションの開始</span></span>
+<span id="cb9-2"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-2"></a><span class="kw">START</span> <span class="kw">TRANSACTION</span>;</span>
+<span id="cb9-3"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-3"></a></span>
+<span id="cb9-4"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-4"></a><span class="co">-- p_users テーブルの作成 (ここを記述)</span></span>
+<span id="cb9-5"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-5"></a></span>
+<span id="cb9-6"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-6"></a><span class="co">-- p_users テーブルにレコードを挿入 (ここを記述)</span></span>
+<span id="cb9-7"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-7"></a></span>
+<span id="cb9-8"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-8"></a><span class="co">-- テーブルの確認</span></span>
+<span id="cb9-9"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-9"></a><span class="kw">SELECT</span></span>
+<span id="cb9-10"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-10"></a>  <span class="op">*</span></span>
+<span id="cb9-11"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-11"></a><span class="kw">FROM</span></span>
+<span id="cb9-12"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-12"></a>  p_users;</span>
+<span id="cb9-13"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-13"></a></span>
+<span id="cb9-14"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-14"></a><span class="co">-- p_users テーブルを集計 (ここを記述)</span></span>
+<span id="cb9-15"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-15"></a></span>
+<span id="cb9-16"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-16"></a><span class="co">-- ロールバックによる処理の取り消し</span></span>
+<span id="cb9-17"><a href="https://takeshiwada1980.github.io/DB-2025/lecture07.html#cb9-17"></a><span class="kw">ROLLBACK</span>;</span></code></pre></div>
+<p><strong>[期待する実行結果]</strong></p>
+<pre><code>START TRANSACTION
+CREATE TABLE
+INSERT 0 5
+ user_id |  name   | is_admin | height_cm |  birthday
+---------+---------+----------+-----------+------------
+       1 | Alice   | t        |     162.3 | 2003-10-20
+       2 | Bob     | f        |     181.9 | 2002-05-05
+       3 | Charlie | f        |           |
+       4 | Ellen   | t        |     172.7 |
+       5 | Eve     | f        |           | 2024-06-30
+(5 行)
+
+ user_count | height_avg | admin_count
+------------+------------+-------------
+          5 |     172.30 |           2
+(1 行)</code></pre>
+<ul>
+<li>user_id は、整数型で主キーとしてください。</li>
+<li>name は、文字列型として非NULL制約をつけてください。</li>
+<li>is_admin は、ブール型としてください。非NULL制約をつけてください。</li>
+<li>height_cm
+      は、適切に桁数を設定した固定小数点型としてください。NULLを許容してください。</li>
+<li>birthday は、日付型としてください。NULLを許容してください。</li>
+<li>admin_count を集計する方法 (＝<span class="masked">CASE と SUM
+      を組み合わせた典型的な条件付き集計</span>) は、授業ではまだ触れていないので解答例
+      <code>from-teacher/07/drill/ex-01_1.sql</code> を参考にしてください。</li>
+</ul>
+  </div>
+</div>
+
+</div>
+<script>
+window.onload = function () {
+  // マスク処理
+  let maskedSpans = document.getElementsByClassName('masked');
+  console.log('Found masked spans:', maskedSpans.length);
+  Array.from(maskedSpans).forEach((span) => {
+    span.onclick = () => {
+      span.classList.toggle('open');
+    };
+  });
+};
+</script>
+</body>
+</html>
